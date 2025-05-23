@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora Física</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Calculadora Física</h1>
+    <div class="calculator">
+      <div class="input-group">
+        <label for="calculo">Selecciona el cálculo:</label>
+        <select id="calculo" onchange="mostrarCampos()">
+          <option value="">-- Elegir --</option>
+          <option value="velocidad">1. Velocidad (v = d / t)</option>
+          <option value="aceleracion">2. Aceleración (a = Δv / Δt)</option>
+          <option value="fuerza">3. Fuerza (F = m × a)</option>
+          <option value="trabajo">4. Trabajo (W = F × d × cos(θ))</option>
+          <option value="cinetica">5. Energía Cinética (K = ½ × m × v²)</option>
+          <option value="potencial">6. Energía Potencial Gravitatoria (U = m × g × h)</option>
+          <option value="densidad">7. Densidad (ρ = m / V)</option>
+          <option value="presion">8. Presión (P = F / A)</option>
+          <option value="carga">9. Carga Eléctrica (q = I × t)</option>
+          <option value="ohm">10. Ley de Ohm (V = I × R)</option>
+        </select>
+      </div>
+
+      <div id="campos" class="campos-contenedor"></div>
+
+      <button onclick="calcular()">Calcular</button>
+      <button onclick="limpiar()">Limpiar</button>
+
+      <div class="result" id="resultado"></div>
+    </div>
+
+    <!-- Historial de cálculos -->
+    <div id="historial" class="historial">
+      <h3>Historial de Cálculos</h3>
+      <ul id="historial-lista"></ul>
+    </div>
+
+    <!-- Créditos -->
+    <div class="creditos">
+      <p>Diseñado por Ing. Pedro Rosado</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
